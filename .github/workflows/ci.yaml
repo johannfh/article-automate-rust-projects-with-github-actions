@@ -4,6 +4,9 @@ on:
     types: [opened, reopened, synchronize]
     branches: ['master']
 
+env:
+  RUSTFLAGS: "-Dwarnings" # deny warnings
+
 jobs:
   clippy:
     runs-on: ubuntu-latest
@@ -11,5 +14,5 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
       - name: Run Clippy Check
-        run: cargo clippy -- -Dwarnings
+        run: cargo clippy
 
