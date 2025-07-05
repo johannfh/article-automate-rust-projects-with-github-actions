@@ -15,10 +15,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-      - run: |
-          ls -a
-          cat src/main.rs
-          cat src/tests.rs
       - name: Run Clippy Check
         run: cargo clippy
 
