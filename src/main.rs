@@ -8,6 +8,10 @@ pub fn calculate_triangle_area(base: f64, height: f64) -> f64 {
     0.5 * base * height
 }
 
+fn unused_code() -> u8 {
+    5
+}
+
 fn main() {
     println!("Hello, world!");
 
