@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Clippy Check
-        run: cargo clippy -Dwarnings
+        run: cargo clippy -- -Dwarnings
 
