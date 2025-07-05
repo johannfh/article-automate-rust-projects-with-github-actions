@@ -1,0 +1,13 @@
+name: Rust Project CI
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize]
+    branches: ['master']
+
+jobs:
+  clippy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Clippy Check
+        run: cargo clippy -Dwarnings
+
